@@ -1,0 +1,100 @@
+@import '../../theme/index.less';
+
+.mainMenu{
+
+  height:60px;
+  margin: 0;
+
+  li{
+    float:left;
+    text-align: center;
+    position: relative;
+
+    a.link{
+      display: block;
+      padding: 0 22px;
+      line-height: 60px;
+      font-size: 15px;
+      color: @color_333;
+
+      &:hover{
+        color: @color_fff
+      }
+      &.current{
+        color: @color_fff;
+        font-weight: bold;
+      }
+      &.current:hover{
+        color: @color_fff
+      }
+
+      .border{
+        display:none;
+        width:100%;
+        height:4px;
+        background: #fff;
+        position:absolute;
+        bottom:0;
+        left:0;
+      }
+
+      &.current .border{
+        display:block;
+      }
+    }
+
+    .submenu{
+      display:none;
+      width:100%;
+      position:absolute;
+      left:0;
+      top:80px;
+      background: #fff;
+      box-shadow: @box_shadow;
+
+      p{margin: 0}
+      a{
+        display:block;
+        font-size:14px;
+        line-height:40px;
+        color:@color_888;
+
+        &:hover{
+          background: @color_orange2
+        }
+        &.active{
+          color: @color_orange
+        }
+      }
+
+    }
+    &:hover .submenu{
+      display:block;
+    }
+
+  }
+
+
+}
+
+.miniMenu{
+  .menuButton{
+    display: block;
+    margin-right: -10px;
+    padding: 12px 0;
+    width: 60px;
+    height: 60px;
+    text-align: center;
+    color: #000;
+    cursor: pointer;
+    position: relative;
+
+    i{
+      display:block;
+      height: 6px;
+      font-size: 24px;
+    }
+
+  }
+}
+

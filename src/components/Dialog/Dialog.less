@@ -1,0 +1,81 @@
+/**
+  自定义对话框
+  覆盖antd - Modal的默认样式
+ */
+
+:global{
+
+  #qz{
+
+    .ant-confirm .ant-modal-close{
+      display: block;
+      .ant-modal-close-x{
+        background: url(../../assets/com/login_close@2x.png) no-repeat center center;
+        background-size: 30px 30px;
+        .anticon{
+          display: none
+        }
+      }
+    }
+    .ant-modal-body{
+      padding: 76px 32px 56px 32px;
+    }
+    .ant-modal-body img{
+      width: auto;
+      height:auto;
+      max-width:100%;
+    }
+    .ant-confirm-body .anticon{
+      display:none
+    }
+    .ant-confirm-content{
+      margin:0;
+      max-height:400px;
+      overflow-y:auto;
+    }
+    .ant-confirm-btns{
+      float:none;
+      width:100%;
+      margin-top:20px;
+      text-align:center
+    }
+    .ant-confirm-btns .ant-btn{
+      margin: 0 20px;
+    }
+
+  }
+
+}
+
+.dialogTitle{
+  font-size:18px;
+  margin-bottom:10px;
+  text-align:center;
+}
+.dialogContent{
+  text-align:center;
+  strong{
+    font-size:24px;
+    font-weight:500;
+  }
+  span{
+    font-size:16px;
+  }
+}
+
+.ArticleTitle{
+  margin-bottom:38px;
+  font-size:26px;
+  text-align:center;
+}
+.ArticleDetail{
+  padding:20px;
+  background:#F4F4F4;
+  p{
+    text-indent: 2em;
+  }
+  img{
+    max-width:100%;
+    height:auto;
+  }
+}

@@ -1,0 +1,214 @@
+@import '../../theme/index.less';
+
+.login{
+
+  .banner{
+    display:block;
+    margin-bottom:5px;
+    img{
+      width:100%;
+      height:auto;
+    }
+  }
+
+  .header{
+    margin-bottom: 10px;
+    padding: 12px 15px;
+    height: 48px;
+    border-bottom: 1px solid #E5E5E5;
+    position:relative;
+
+    img{
+      display:inline-block;
+      width:auto;
+      height:20px;
+      float:left;
+      margin-right:40px;
+    }
+
+    h1{
+      float:left;
+      margin:0;
+      text-align:center;
+      font-size:18px;
+      font-weight:normal;
+      line-height:20px;
+    }
+  }
+
+  .result{
+    padding: 15% 30px 10px;
+    text-align: center;
+    img{
+      width:100%;
+      height:auto;
+    }
+    p{
+      color:#BDBDBD
+    }
+  }
+
+  .download{
+    margin-bottom:30px;
+    padding: 15px;
+    text-align:center;
+
+    .link{
+      display:inline-block;
+      margin-bottom:30px;
+      width:160px;
+      height:40px;
+      line-height:38px;
+      color:#0D2F55;
+      border:1px solid #0D2F55;
+      border-radius:3px;
+
+    }
+
+    span{
+      color: @color_888;
+      margin: 0 2px;
+    }
+  }
+
+  .signDesc{
+    dt{
+      margin-bottom:20px;
+      text-align:center;
+      font-size:15px;
+    }
+    ul{
+      overflow:hidden;
+      li{
+        float:left;
+        width:50%;
+        margin-bottom:10px;
+        text-align:center;
+
+        img{
+          width:34px;
+          height:auto;
+        }
+        span{
+          display:block;
+          font-size:12px;
+          color:@color_888;
+        }
+      }
+    }
+  }
+
+}
+
+.formBox{
+
+  padding: 80px 15px;
+
+  :global{
+    .ant-form-item{
+      margin-bottom:29px;
+    }
+    .ant-form-item-with-help{
+      margin-bottom:10px;
+    }
+    .ant-input{
+      height:50px;
+      font-size:15px;
+      border-radius:0;
+      border: none;
+      border-bottom: 1px solid #E5E5E5;
+      box-shadow: none;
+    }
+    .ant-input-disabled{
+      color: @color_333;
+      background: none;
+    }
+    .ant-input-affix-wrapper:hover .ant-input:not(.ant-input-disabled){
+      border-color: @color_blue;
+    }
+    .has-error .ant-input:not([disabled]):hover{
+      border-color: @color_red;
+    }
+    .ant-input-affix-wrapper{
+      border: none;
+    }
+
+    .has-error .ant-input{
+      box-shadow: none;
+    }
+
+    .ant-btn-primary{
+      background-color: @color_blue;
+      border-color: @color_blue;
+    }
+    .ant-btn-primary[disabled]{
+      background-color: #9EACBB;
+      border-color: #9EACBB;
+    }
+    .ant-checkbox-checked .ant-checkbox-inner{
+      background-color: @color_blue;
+      border-color: @color_blue;
+    }
+    .ant-checkbox-wrapper:hover .ant-checkbox-inner,
+    .ant-checkbox:hover .ant-checkbox-inner,
+    .ant-checkbox-input:focus + .ant-checkbox-inner{
+      border-color: @color_blue;
+    }
+  }
+
+  .checked{
+    color: @color_888
+  }
+  .forgotPsd{
+    float: right;
+    color: @color_orange;
+  }
+
+  .btn{
+    margin-top:20px;
+  }
+
+  .desc{
+    margin: 20px 5px;
+    overflow: hidden;
+    span{
+      color: @color_888;
+    }
+    a{
+      color: @color_blue
+    }
+    .loginType{
+      float: right
+    }
+  }
+
+  .inputEye{
+    display:inline-block;
+    margin-left:10px;
+    cursor: pointer;
+    i{
+      display:block;
+      width:18px;
+      height:18px;
+      position:relative;
+      top:5px;
+      &.open{
+        background:url(../../assets/sign/signremind_open@2x.png) no-repeat center center;
+        background-size: 18px auto;
+      }
+      &.close{
+        background:url(../../assets/sign/invisible@2x.png) no-repeat center center;
+        background-size: 18px auto;
+      }
+    }
+
+  }
+
+  .xieyi{
+    color:@color_888;
+    a{
+      color: @color_blue
+    }
+  }
+
+}

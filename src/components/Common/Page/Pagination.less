@@ -1,0 +1,30 @@
+.page_wrapper{
+  width: 100%;
+  text-align: center;
+  .override-ant-pagination{
+    :global{
+      .ant-pagination{
+        display: inline-block;
+        color: #888888;
+        .ant-pagination-total-text{
+          p{
+            font-size: 14px;
+            line-height: 32px;
+            height: 32px;
+            font-weight: 400;
+            span:last-child{
+              margin-left: 20px;
+            }
+          }
+        }
+        .ant-pagination-item,.ant-pagination-item-link{
+          border-radius: 0;
+          a{
+            color: #888888;
+          }
+        }
+      }
+    }
+  }
+
+}
