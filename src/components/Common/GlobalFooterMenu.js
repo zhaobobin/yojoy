@@ -1,55 +1,24 @@
 /**
- * 主导航菜单
+ * 底部导航菜单
  */
 import React from 'react';
 import {NavLink} from 'dva/router';
 import {Row, Col, Menu, Dropdown, Icon} from 'antd'
-import styles from './GlobalHeaderMenu.less';
+import styles from './GlobalFooterMenu.less';
 
-export default class GlobalHeaderMenu extends React.Component {
+export default class GlobalFooterMenu extends React.Component {
 
   constructor(props){
     super(props);
     this.state = {
-      currentNav: 'home'
+
     }
   }
-
-  componentDidMount(){
-    window.addEventListener('scroll', this.onScroll);
-  }
-
-  onScroll = () => {
-    let currentNav = '';
-    const scrollTop = document.documentElement.scrollTop;
-    const homeTop = document.getElementById('home').getBoundingClientRect().top + scrollTop - 80;
-    const serviceTop = document.getElementById('service').getBoundingClientRect().top + scrollTop - 80;
-    const caseTop = document.getElementById('case').getBoundingClientRect().top + scrollTop - 80;
-    const aboutTop = document.getElementById('about').getBoundingClientRect().top + scrollTop - 80;
-
-    // console.log(scrollTop)
-    if(scrollTop >= 0 && scrollTop < serviceTop){
-      currentNav = 'home'
-    }
-    if(scrollTop >= serviceTop && scrollTop < caseTop){
-      currentNav = 'service'
-    }
-    if(scrollTop >= caseTop && scrollTop < aboutTop){
-      currentNav = 'case'
-    }
-    if(scrollTop >= aboutTop){
-      currentNav = 'about'
-    }
-    // console.log(currentNav)
-    this.setState({ currentNav })
-
-  };
 
   scrollToAnchor = (anchorName) => {
     let anchorElement = document.getElementById(anchorName);
     // 如果对应id的锚点存在，就跳转到锚点
     if(anchorElement) {
-      this.setState({ currentNav: anchorName });
       anchorElement.scrollIntoView({block: 'start', behavior: 'smooth'});
     }
   };
@@ -60,7 +29,7 @@ export default class GlobalHeaderMenu extends React.Component {
       if (!item.name || item.isHide) return null;
       return (
         type === 'main' ?
-          <li key={item.key} className={item.key === this.state.currentNav ? styles.current : ''}>
+          <li key={item.key}>
             <a
               className={styles.link}
               onClick={() => this.scrollToAnchor(item.key)}
@@ -72,14 +41,14 @@ export default class GlobalHeaderMenu extends React.Component {
             </a>
           </li>
           :
-          <Menu.Item key={item.key} className={item.key === this.state.currentNav ? styles.current : ''}>
+          <Menu.Item key={item.key}>
             <a
               className={styles.link}
               onClick={() => this.scrollToAnchor(item.key)}
             >
-            <span>
-              {item.name}
-            </span>
+              <span>
+                {item.name}
+              </span>
               <i className={styles.border}/>
             </a>
           </Menu.Item>

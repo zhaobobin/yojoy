@@ -3,7 +3,7 @@ import { Link } from 'dva/router'
 import { Row, Col } from 'antd'
 import styles from './GlobalHeader.less'
 
-import logo from '~/assets/com/logo.png'
+import logo from '~/assets/com/logo@2x.png'
 import GlobalHeaderMenu from '~/components/Common/GlobalHeaderMenu'
 
 export default function GlobalHeader ({navData}) {
@@ -20,9 +20,9 @@ export default function GlobalHeader ({navData}) {
           <div className={styles.nav}>
 
             <div className={styles.logo}>
-              <Link to="/">
+              <a href="/">
                 <img src={logo} alt="logo"/>
-              </Link>
+              </a>
             </div>
 
             {

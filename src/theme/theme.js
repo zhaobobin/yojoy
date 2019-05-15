@@ -9,7 +9,7 @@ export default {
 
   "font-size-base": "14px",                           // 主字号
   "heading-color": "#333",                            // 标题色
-  "text-color": "#333",                               // 主文本色
+  "text-color": "#121212",                               // 主文本色
   "text-color-secondary" : "#888",                    // 次文本色
   // "disabled-color" : "#FFE9D4",                       // 失效色
   // "disable-bg": "#FFE9D4",                            // 失效色

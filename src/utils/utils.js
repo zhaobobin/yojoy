@@ -18,36 +18,36 @@ export const ENV = {
     ios: 'https://www.pgyer.com/4KmZ',
   },
 
-  appname: '趣族',
-  hometitle: '趣族',
-  keywords: '趣族',
-  description: '趣族',
+  appname: '悠洛网络',
+  hometitle: '悠洛网络',
+  keywords: '悠洛网络',
+  description: '悠洛网络',
 
-  company: '趣族',
-  address: '趣族',
+  company: '悠洛网络有限公司',
+  address: '悠洛网络',
   youbian: '100105',
   hotline: '',
   email: '',
   worktime: '',
 
-  web: 'www.moxinga.com',
+  web: '',
   slogan: '',
   weixin: '',
   icp: '',
-  beian: '京ICP备15018716号-2',
+  beian: '',
   copyright: '',
 
-  storageAccessToken: 'qz-access-token',
-  storageRefreshToken: 'qz-refresh-token',
-  storageUserId: 'qz-userid',
-  storageCurrentUser: 'qz-currentCurrentUser',
-  storageLastTel: 'qz-lastTel',
-  storageRemenber: 'qz-remenber',
-  storageTheme: 'qz-theme',
-  storageCurrentMenu: 'qz-currentMenu',
-  storagePagesize: 'qz-pagesize',
-  storageHistory: 'qz-history',          //路由历史
-  storageLucky: 'qz-lucky',               // 抽奖记录
+  storageAccessToken: 'yojoy-access-token',
+  storageRefreshToken: 'yojoy-refresh-token',
+  storageUserId: 'yojoy-userid',
+  storageCurrentUser: 'yojoy-currentCurrentUser',
+  storageLastTel: 'yojoy-lastTel',
+  storageRemenber: 'yojoy-remenber',
+  storageTheme: 'yojoy-theme',
+  storageCurrentMenu: 'yojoy-currentMenu',
+  storagePagesize: 'yojoy-pagesize',
+  storageHistory: 'yojoy-history',          //路由历史
+  storageLucky: 'yojoy-lucky',               // 抽奖记录
 };
 
 /**

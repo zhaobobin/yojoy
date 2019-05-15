@@ -1,17 +1,39 @@
 @import '../../theme/index.less';
 
-.footer{
+.container{
   width: 100%;
-  padding: 35px 0;
-  background: #F6F6F6;
+  padding: 50px 0 30px;
+  background: #EDEDED;
 
-  p{
-    text-align:center;
-    span{
-      display: inline-block;
-      margin: 0 5px;
-      color: @color_888;
+  .nav{
+    overflow: hidden;
+  }
+
+  .logo{
+    float:left;
+    width: 350px;
+    a{
+      display:inline-block;
+      padding: 12px 0;
     }
+    img{
+      width:auto;
+      height:25px;
+    }
+    span{
+      display:inline-block;
+      margin-left: 10px;
+      position: relative;
+      top: 5px;
+    }
+  }
+
+  .menu{
+    float:right;
+  }
+
+  .copyright{
+    color: #797979
   }
 
 }

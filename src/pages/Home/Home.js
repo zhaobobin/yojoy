@@ -1,14 +1,22 @@
 import React from 'react';
-import { Link } from 'dva/router';
-import { ENV } from '~/utils/utils'
-import styles from './Home.less'
+
+import HomeBanner from '~/components/Home/HomeBanner'
+import HomeService from '~/components/Home/HomeService'
+import HomeCase from '~/components/Home/HomeCase'
+import HomeAbout from '~/components/Home/HomeAbout'
 
 export default function Home() {
 
   return(
-    <div className={styles.home}>
+    <div>
 
-      Home
+      <HomeBanner/>
+
+      <HomeService/>
+
+      <HomeCase/>
+
+      <HomeAbout/>
 
     </div>
   )

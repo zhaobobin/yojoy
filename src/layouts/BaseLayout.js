@@ -98,15 +98,17 @@ export default class BaseLayout extends React.Component {
     const { getRouteData, navData, location } = this.props;
     const { loading } = this.props.global;
 
+    const nav = [
+      {name: '首页', key: 'home', path: '#1'},
+      {name: '服务介绍', key: 'service', path: '#2'},
+      {name: '经典案例', key: 'case', path: '#3'},
+      {name: '关于我们', key: 'about', path: '#4'},
+    ];
+
     const layout = (
       <div className={styles.layout}>
 
-        {
-          paramsObj.platform === 'app' || location.pathname === '/download' ?
-            null
-            :
-            <GlobalHeader navData={navData[0].children}/>
-        }
+        <GlobalHeader navData={nav}/>
 
         {
           loading ?
@@ -139,12 +141,7 @@ export default class BaseLayout extends React.Component {
             </div>
         }
 
-        {
-          location.pathname === '/' ?
-            null
-            :
-            <GlobalFooter/>
-        }
+        <GlobalFooter navData={nav}/>
 
       </div>
     );
