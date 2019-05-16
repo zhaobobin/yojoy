@@ -116,7 +116,7 @@ export default function HomeService () {
                   <dl>
                     <dt>
                       <img src={require('~/assets/home/bulb@2x.png')} alt="bulb"/>
-                      <span>强大能力</span>
+                      <span>原创能力</span>
                     </dt>
                     <dd>
                       <p>团队设计师均具备视频制作能力，掌握Facebook，Google等主流媒体的广告素材特点及要求 ，基于本地化立场，通过原创制作出优质素材</p>

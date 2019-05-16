@@ -18,16 +18,16 @@ export const ENV = {
     ios: 'https://www.pgyer.com/4KmZ',
   },
 
-  appname: '悠洛网络',
-  hometitle: '悠洛网络',
+  appname: 'YOJOY',
+  hometitle: 'YOJOY',
   keywords: '悠洛网络',
   description: '悠洛网络',
 
   company: '悠洛网络有限公司',
-  address: '悠洛网络',
+  address: '北京市朝阳区霄云里8号院16层15095',
   youbian: '100105',
   hotline: '',
-  email: '',
+  email: 'bd@yojoynet.com',
   worktime: '',
 
   web: '',

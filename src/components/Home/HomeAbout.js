@@ -21,12 +21,8 @@ export default function HomeAbout () {
                 <span>北京市朝阳区霄云里8号院16层15095</span>
               </p>
               <p>
-                <label>网址：</label>
-                <span>bd@yojoynet.com</span>
-              </p>
-              <p>
                 <label>邮箱：</label>
-                <span>3066194495@qq.com</span>
+                <span>bd@yojoynet.com</span>
               </p>
             </dd>
           </dl>
