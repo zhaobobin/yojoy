@@ -2,6 +2,14 @@ import React from 'react';
 import { Link } from 'dva/router'
 import styles from './HomeBanner.less'
 
+function scrollToAnchor(anchorName){
+  let anchorElement = document.getElementById(anchorName);
+  // 如果对应id的锚点存在，就跳转到锚点
+  if(anchorElement) {
+    anchorElement.scrollIntoView({block: 'start', behavior: 'smooth'});
+  }
+}
+
 export default function HomeBanner () {
 
   return(
@@ -10,7 +18,7 @@ export default function HomeBanner () {
       <div className={styles.banner}>
         <img src={require('~/assets/home/banner.jpg')} alt="banner"/>
         <h1>悠洛网络 <br/> 为您的产品出海保驾护航</h1>
-        <a className={styles.down}/>
+        <a className={styles.down} onClick={() => scrollToAnchor('service')}/>
       </div>
 
       <div className={styles.desc}>

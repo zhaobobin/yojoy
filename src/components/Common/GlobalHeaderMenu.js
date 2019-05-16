@@ -16,13 +16,15 @@ export default class GlobalHeaderMenu extends React.Component {
   }
 
   componentDidMount(){
-    window.addEventListener('scroll', this.onScroll);
+    setTimeout(() => {
+      window.addEventListener('scroll', this.onScroll);
+    }, 500)
   }
 
   onScroll = () => {
     let currentNav = '';
     const scrollTop = document.documentElement.scrollTop;
-    const homeTop = document.getElementById('home').getBoundingClientRect().top + scrollTop - 80;
+    // const homeTop = document.getElementById('home').getBoundingClientRect().top + scrollTop - 80;
     const serviceTop = document.getElementById('service').getBoundingClientRect().top + scrollTop - 80;
     const caseTop = document.getElementById('case').getBoundingClientRect().top + scrollTop - 80;
     const aboutTop = document.getElementById('about').getBoundingClientRect().top + scrollTop - 80;
@@ -31,13 +33,13 @@ export default class GlobalHeaderMenu extends React.Component {
     if(scrollTop >= 0 && scrollTop < serviceTop){
       currentNav = 'home'
     }
-    if(scrollTop >= serviceTop && scrollTop < caseTop){
+    else if(scrollTop >= serviceTop && scrollTop < caseTop){
       currentNav = 'service'
     }
-    if(scrollTop >= caseTop && scrollTop < aboutTop){
+    else if(scrollTop >= caseTop && scrollTop < aboutTop - 500){
       currentNav = 'case'
     }
-    if(scrollTop >= aboutTop){
+    else{
       currentNav = 'about'
     }
     // console.log(currentNav)
@@ -60,9 +62,9 @@ export default class GlobalHeaderMenu extends React.Component {
       if (!item.name || item.isHide) return null;
       return (
         type === 'main' ?
-          <li key={item.key} className={item.key === this.state.currentNav ? styles.current : ''}>
+          <li key={item.key}>
             <a
-              className={styles.link}
+              className={styles.link + " " + (item.key === this.state.currentNav ? styles.current : '')}
               onClick={() => this.scrollToAnchor(item.key)}
             >
               <span>
@@ -72,14 +74,14 @@ export default class GlobalHeaderMenu extends React.Component {
             </a>
           </li>
           :
-          <Menu.Item key={item.key} className={item.key === this.state.currentNav ? styles.current : ''}>
+          <Menu.Item key={item.key}>
             <a
               className={styles.link}
               onClick={() => this.scrollToAnchor(item.key)}
             >
-            <span>
-              {item.name}
-            </span>
+              <span>
+                {item.name}
+              </span>
               <i className={styles.border}/>
             </a>
           </Menu.Item>
